@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clicker -peli</title>
     <link rel="stylesheet" href="./tyylit.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
-        <h1>Timanttipeli</h1>
-        <img src="./img/kirkjas.png" alt="kirkastimantti">
-        <div class="ohjeistus">
-            <h3>Kerää timantteja ja ansaitse rahaa.</h3>
+    <div class="header-row">
+        <div class="header">
+            <h1>Timanttipeli</h1>
+            <img src="./img/kirkjas.png" alt="kirkastimantti">
+        </div>
+        <div class="lompakko">
+            <h2>Lompakko</h2>
+            <p id="rahaa"></p>
         </div>
     </div>
     <div class="container">
@@ -20,143 +26,159 @@
             <p>Klikkaa timanttia jolloin se siirtyy reppusi</p>
             <p>Eri väriset timantit ovat eri arvoisia.</p>
             <p>Alla listaus timanttien arvosta:</p>
-            <ul>
-                <li><img src="./img/kelainen.png" alt="keltainen">Keltainen = 10 $</li>
-                <li><img src="./img/oranssi.png" alt="oranssi">Oranssi = 30 $</li>
-                <li><img src="./img/pinkki.png" alt="pinkki"> Pinkki = 60 $</li>            
-                <li><img src="./img/turkoosi.png" alt="turkoosi">Turkoosi = 80 $</li>
-                <li><img src="./img/vihreä.png" alt="vihreä">Vihreä = 100 $</li>
-            </ul>
-            <p>Kun olet keräänyt tarpeeksi timantteja, myy ne timanttikauppaan ja ansaitse rahaa!</p>
+            <div><img src="./img/kelainen.png" alt="keltainen"><p style="display: inline;">Keltainen = 1$</p></div>
+            <div><img src="./img/oranssi.png" alt="oranssi"><p style="display: inline;">Oranssi = 2$</p></div>       
+            <div><img src="./img/pinkki.png" alt="pinkki"><p style="display: inline;">Pinkki = 3$</p></div>
+            <div><img src="./img/turkoosi.png" alt="turkoosi"><p style="display: inline;">Turkoosi = 4$</p></div>
+            <div><img src="./img/vihreä.png" alt="vihreä"><p style="display: inline;">Vihreä = 5$</p></div>
+            <p>Kun olet keräänyt tarpeeksi timantteja, myy ne timanttikauppaan!</p>
         </div>
         <div class="column middle">
             <div>
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki()" style="cursor: pointer;">
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
+                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki(this)" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
             </div>
             <div>
-                <img src="./img/kelainen.png" alt="keltainen" id="kelt" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" id="kelt" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" id="kelt" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
-                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi()" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
+                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi(this)" style="cursor: pointer;">
             </div>
             <div>
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/vihreä.png" alt="vihreä" onclick="vihreä()" style="cursor: pointer;">
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
-                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi()" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/vihreä.png" alt="vihreä" onclick="vihreä(this)" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
+                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi(this)" style="cursor: pointer;">
                 
             </div>
             <div>
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi()" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi(this)" style="cursor: pointer;">
                 
             </div>
             <div>
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki()" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki(this)" style="cursor: pointer;">
                 
             </div>
             <div>
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi()" style="cursor: pointer;">
-                <img src="./img/vihreä.png" alt="vihreä" onclick="vihreä()" style="cursor: pointer;">
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi(this)" style="cursor: pointer;">
+                <img src="./img/vihreä.png" alt="vihreä" onclick="vihreä(this)" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
             </div>
             <div>
-                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi()" style="cursor: pointer;">
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
+                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi(this)" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
                 
             </div>
             <div>
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki()" style="cursor: pointer;">
-                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki(this)" style="cursor: pointer;">
+                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
                 
             </div>
             <div>
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi()" style="cursor: pointer;">
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
-                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki()" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi(this)" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
+                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki(this)" style="cursor: pointer;">
                 
             </div>
             <div>
                 
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/vihreä.png" alt="vihreä" onclick="vihreä()" style="cursor: pointer;">
-                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki()" style="cursor: pointer;">
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/vihreä.png" alt="vihreä" onclick="vihreä(this)" style="cursor: pointer;">
+                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki(this)" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
                   
             </div>
             <div>
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki()" style="cursor: pointer;">
-                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi()" style="cursor: pointer;">
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
+                <img id="k"src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki(this)" style="cursor: pointer;">
+                <img src="./img/turkoosi.png" alt="turkoosi" onclick="turkoosi(this)" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
                 
             </div>
             <div>
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">      
-                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
-                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi()" style="cursor: pointer;">
-                <img src="./img/kelainen.png" alt="keltainen" onclick="keltainen()" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">      
+                <img src="./img/pinkki.png" alt="pinkki" onclick="pinkki(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
+                <img src="./img/oranssi.png" alt="oranssi" onclick="oranssi(this)" style="cursor: pointer;">
+                <img id="k" src="./img/kelainen.png" alt="keltainen" onclick="keltainen(this)" style="cursor: pointer;">
                 
             </div>
             
         </div>
         <div class="column right">
-            <h5>Kerätyt timantit:</h5>
+            <div class="repussa">
                 <div>
-                    <img src="./img/kelainen.png" alt="keltainen"><p style="display: inline;" id="keltsu"></p>
+                    <h3>Kerätyt timantit:</h3>
+                    <div class="kerätyt">
+                        <img src="./img/kelainen.png" alt="keltainen"><p style="display: inline;" id="keltsu"></p>
+                    </div>
+                    <div class="kerätyt">
+                        <img src="./img/oranssi.png" alt="oranssi"><p style="display: inline;" id="oranski"></p>
+                    </div>
+                    <div class="kerätyt">
+                        <img src="./img/pinkki.png" alt="pinkki"><p style="display: inline;" id="pinksu"></p>
+                    </div>
+                    <div class="kerätyt">
+                        <img src="./img/turkoosi.png" alt="turkoosi"><p style="display: inline;" id="turkkosi"></p>
+                    </div>
+                    <div class="kerätyt">
+                        <img src="./img/vihreä.png" alt="vihreä"><p style="display: inline;" id="virtsu"></p>
+                    </div>
                 </div>
                 <div>
-                    <img src="./img/oranssi.png" alt="oranssi"><p style="display: inline;" id="oranski"></p>
+                    <img src="./img/backpack-306756_1280.png" alt="reppu" class="reppu">
                 </div>
-                <div>
-                    <img src="./img/pinkki.png" alt="pinkki"><p style="display: inline;" id="pinksu"></p>
-                </div>          
-                <div>
-                    <img src="./img/turkoosi.png" alt="turkoosi"><p style="display: inline;" id="turkkosi"></p>
-                </div>
-                <div>
-                    <img src="./img/vihreä.png" alt="vihreä"><p style="display: inline;" id="virtsu"></p>
-                </div>
-            
+            </div>                    
         </div>
+    </div>
+    <div class="alacontainer">
+        <div class="timanttikauppa">
+            <img src="./img/kirkjas.png" alt="kirkastimantti">
+            <h1>Timanttikauppa</h1>
+            <div class="image-row">
+                <img class="sell" src="./img/sell_button.png" alt="sell" onclick="myy()" style="cursor: pointer;">
+                <img src="./img/nuoli.png" alt="nuoli" id="nuoli">
+            </div>
+            <img src="./img/kirkjas.png" alt="kirkastimantti">
+        </div>
+        
     </div>
 
     <script src="./main.js"></script>
