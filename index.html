@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clicker -peli</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./tyylit.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,18 +21,24 @@
             <p id="rahaa"></p>
         </div>
     </div>
-    <div class="container">
+    <div class="kontti">
         <div class="column left">
             
-            <p>Klikkaa timanttia jolloin se siirtyy reppusi</p>
-            <p>Eri väriset timantit ovat eri arvoisia.</p>
-            <p>Alla listaus timanttien arvosta:</p>
-            <div><img src="./img/kelainen.png" alt="keltainen"><p style="display: inline;">Keltainen = 1$</p></div>
-            <div><img src="./img/oranssi.png" alt="oranssi"><p style="display: inline;">Oranssi = 2$</p></div>       
-            <div><img src="./img/pinkki.png" alt="pinkki"><p style="display: inline;">Pinkki = 3$</p></div>
-            <div><img src="./img/turkoosi.png" alt="turkoosi"><p style="display: inline;">Turkoosi = 4$</p></div>
-            <div><img src="./img/vihreä.png" alt="vihreä"><p style="display: inline;">Vihreä = 5$</p></div>
-            <p>Kun olet keräänyt tarpeeksi timantteja, myy ne timanttikauppaan!</p>
+            <div class="row">
+                <div class="col">
+                    <p>Klikkaa timanttia jolloin se siirtyy reppusi</p>
+                    <p>Eri väriset timantit ovat eri arvoisia.</p>
+                    <p>Kun olet keräänyt tarpeeksi timantteja, myy ne timanttikauppaan!</p>
+                </div>
+                <div class="col">
+                    <div><img src="./img/kelainen.png" alt="keltainen"><p style="display: inline;">Keltainen = 1$</p></div>
+                    <div><img src="./img/oranssi.png" alt="oranssi"><p style="display: inline;">Oranssi = 2$</p></div>
+                    <div><img src="./img/pinkki.png" alt="pinkki"><p style="display: inline;">Pinkki = 3$</p></div>
+                    <div><img src="./img/turkoosi.png" alt="turkoosi"><p style="display: inline;">Turkoosi = 4$</p></div>
+                    <div><img src="./img/vihreä.png" alt="vihreä"><p style="display: inline;">Vihreä = 5$</p></div>
+                    
+                </div>
+            </div>
         </div>
         <div class="column middle">
             <div>
@@ -143,8 +150,9 @@
             
         </div>
         <div class="column right">
-            <div class="repussa">
-                <div>
+            
+            <div class="row">
+                <div class="col-lg-6 col-md-9 ker">
                     <h3>Kerätyt timantit:</h3>
                     <div class="kerätyt">
                         <img src="./img/kelainen.png" alt="keltainen"><p style="display: inline;" id="keltsu"></p>
@@ -159,10 +167,10 @@
                         <img src="./img/turkoosi.png" alt="turkoosi"><p style="display: inline;" id="turkkosi"></p>
                     </div>
                     <div class="kerätyt">
-                        <img src="./img/vihreä.png" alt="vihreä"><p style="display: inline;" id="virtsu"></p>
+                        <img src="./img/vihreä.png" alt="vihreä"><p style="display: inline;" id="virtsu"></p>       
                     </div>
                 </div>
-                <div>
+                <div class="col-lg-6 col-md-3">
                     <img src="./img/backpack-306756_1280.png" alt="reppu" class="reppu">
                 </div>
             </div>                    
@@ -180,7 +188,7 @@
         </div>
         
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
 </body>
 </html>

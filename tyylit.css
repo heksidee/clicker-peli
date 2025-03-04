@@ -1,6 +1,9 @@
 body {
     background-image: url(./img/taustakuva.jpg);
 }
+* {
+    box-sizing: border-box;
+}
 .header-row {
     display: flex;
     flex-direction: row;
@@ -12,8 +15,6 @@ body {
     align-items: center;
     flex: 2;
     background-color: rgb(239, 92, 224);
-    padding-left: 15px;
-    padding-top: 5px;
     color: rgb(43, 27, 216);
     margin: 10px;
     border-radius: 10%;
@@ -31,19 +32,19 @@ body {
     border-radius: 10%;
     box-sizing: border-box;
 }
-@media only screen and (max-width: 768px) {
-    .header, .lompakko, .left, .middle, .right {
-        flex: 1;
-    }
-}
+
 img {
     height: 50px;
     width: auto;
     margin: 7px;
 }
-.container {
+.kontti {
     display: flex;
     flex-direction: row;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 .column {
     margin-left: 10px;
@@ -53,13 +54,13 @@ img {
     background-color: rgb(168, 77, 220);
 }
 .left, .right {
-    flex: 1;
-    padding: 20px;
+    width: 50%;
+    padding: 5px;
 }
 .middle {
     display: grid;
     grid-template-columns: auto auto auto;
-    flex: 2;
+    width: 50%;
     padding: 5px;
 }
 .left img {
@@ -71,19 +72,21 @@ img {
     height: 20px;
     width: auto;
 }
-.repussa {
-    display: grid;
-    grid-template-columns: auto auto;
-}
 
 .reppu {
     height: 100px;
     width: auto;
 }
+.ker {
+    display: flex;
+    flex-direction: column;
+}
 .kerätyt {
     display: flex;
+    flex-direction: column;
     align-items: center;
     font-size: large;
+    display: inline;
 }
 .kerätyt p {
     font-family: "Bebas Neue", serif;
@@ -138,4 +141,27 @@ img {
     font-size: xx-large;
     margin-top: 4px;
     margin-bottom: 4px;
+}
+
+@media (max-width: 992px) {
+    .kontti {
+        display: flex;
+        flex-direction: column;
+        margin-right: 5px;
+        width: 98%;
+    }
+    .left, .middle, .right {
+        width: 100%;
+    }
+    
+    .ker {
+        display: flex;
+        flex-direction: row;
+    }
+    .kerätyt {
+        display: flex;
+        flex-direction: row;
+        display: inline;
+        align-items: center;
+        font-size: medium;
 }
